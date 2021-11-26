@@ -1,7 +1,7 @@
 ## Réalisé par :
 OULD OULHADJ Lisa  
-BOUFALA Yacine
-HAROUN Rayane
+BOUFALA Yacine   
+HAROUN Rayane   
 
 ## Objectif du projet : 
 L'objectif de notre projet est d'analyser l'impact de la santé sur le marché du travail et de la finance en développant une pipeline big data.
@@ -14,8 +14,8 @@ L'objectif de notre projet est d'analyser l'impact de la santé sur le marché d
 
 2 - Récupération des fichiers santé.csv, Emploie.csv et Finance.csv :
 	- Emploie : https://www.insee.fr/fr/statistiques/series/103167884
-	- Santé : lien ----------
-	- Finance : lien -----------
+	- Santé : https://www.data.gouv.fr/fr/datasets/r/dc7663c7-5da9-4765-a98b-ba4bc9de9079
+	- Finance : -----
 
 3 - Nettoyage des données.
 
@@ -34,6 +34,10 @@ L'objectif de notre projet est d'analyser l'impact de la santé sur le marché d
 
 5 - Stockage des dossiers dans HDFS. 
 
+		emploie :  /home/projet-BD/work/data/emploie 
+		finance : /home/projet-BD/work/data/finance
+		sante : /home/projet-BD/work/data/sante
+		
 6 - producer qui permet de : 
 
 	1 - lancer Kafka.
@@ -61,24 +65,36 @@ L'objectif de notre projet est d'analyser l'impact de la santé sur le marché d
 
 1 - docker image :
 
-		docker-compose up 
+		docker-compose up -d
 
-2 - Splitter : 
+2 - Splitter : (pour decouper les 3 grands fichier en plusieurs)
 
-		python splitter.py 
+		python3 splitter.py 
 
 3 - IOT : 
 	
-		python IOT.py
+		python3 IOT.py
 
-4 - Producer : 
+4 - acceder a l'image python : 
 	
-		python producer.py
+		docker exec -it projetbd_py_1 bash
+		
+5 - aller dans notre volume : 
+	
+		cd /home/projet-BD/work/
 
-5 - Consumer : 
+6 - installer les requirements : 
+	
+		pip3 install -r requirements.txt
+		
+7 - Producer : 
+	
+		python3 code/producer.py
 
-		python consumer.py
+6 - Consumer : (sur votre machine en local)
 
-6 - Streamlit : 
+		python3 consumer.py
+
+7 - Streamlit : (executer à part ! en local !)
 
 		streamlit run dash.py
