@@ -19,7 +19,9 @@ L'objectif de notre projet est d'analyser l'impact de la santé sur le marché d
 
 3 - Nettoyage des données.
 
-4 - Découpage des 3 fichiers nettoyés (data_emploie.csv, data_finance.csv, data_sante.csv) en plusieurs 		fichiers à l'aide d'un splitter :	      3.1 - création de 3 dossiers destinataires vides :
+4 - Découpage des 3 fichiers nettoyés (data_emploie.csv, data_finance.csv, data_sante.csv) en plusieurs fichiers à l'aide d'un splitter :	      
+
+   3.1 - création de 3 dossiers destinataires vides :
 
 		Emploie :  data/emploie 
 		Finance : data/finance
