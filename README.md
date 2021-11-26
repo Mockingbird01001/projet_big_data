@@ -12,9 +12,9 @@ L'objectif de notre projet est d'analyser l'impact de la santé sur le marché d
 1 - Création de l'image docker: 
 	Fichier "docker-compose.yml"
 
-2 - Récupération des fichiers santé.csv, Emploie.csv et Finance.csv :
-	- Emploie : https://www.insee.fr/fr/statistiques/series/103167884
-	- Santé : https://www.data.gouv.fr/fr/datasets/r/dc7663c7-5da9-4765-a98b-ba4bc9de9079
+2 - Récupération des fichiers santé.csv, Emploie.csv et Finance.csv :     
+	- Emploie : https://www.insee.fr/fr/statistiques/series/103167884         
+	- Santé : https://www.data.gouv.fr/fr/datasets/r/dc7663c7-5da9-4765-a98b-ba4bc9de9079          
 	- Finance : -----
 
 3 - Nettoyage des données.
